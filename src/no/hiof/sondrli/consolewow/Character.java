@@ -15,12 +15,9 @@ public class Character {
     }
 
     // OTHER METHODS
-    public String die() {
+    private void die() {
         if (alive) {
             alive = false;
-            return this.getName() + "has died.";
-        } else {
-            return this.getName() + "is already dead";
         }
     }
 
