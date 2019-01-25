@@ -19,4 +19,8 @@ public class Warrior extends Character {
         return this.level;
     }
 
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
 }

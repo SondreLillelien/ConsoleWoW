@@ -34,6 +34,8 @@ public class Character {
         }
     }
 
+
+
     // GET AND SET-METHODS
     public int getHp() {
         return hp;
