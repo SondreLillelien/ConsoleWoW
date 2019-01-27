@@ -14,5 +14,7 @@ public class Main {
         kreg.dealPhysDamage(per);
 
         System.out.println(per.getHp());
+
+
     }
 }
