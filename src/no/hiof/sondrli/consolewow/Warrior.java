@@ -9,14 +9,24 @@ public class Warrior extends Character {
         this.level = level;
     }
 
-    // OTHER METHODS
+/*    // OTHER METHODS
     public void dealPhysDamage(Character character) {
         character.takeDamage(this.getPhysDamage());
-    }
+    }*/
 
     // GET AND SET-METHODS.
     public int getLevel() {
         return this.level;
+    }
+
+    public void AutoAttack(Character opponent){
+
+        var damagedone = 12;
+        opponent.takeDamage(
+                new DamageTransactionObject(
+                        damagedone,
+                        this.getHitChance()
+                ));
     }
 
     public void setLevel(int level) {

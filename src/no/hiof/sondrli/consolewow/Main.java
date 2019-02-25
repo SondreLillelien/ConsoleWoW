@@ -1,18 +1,15 @@
 package no.hiof.sondrli.consolewow;
 
-import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        Random rng = new Random();
-        int level = rng.nextInt(5) + 1;
+        int level = 10;
         Warrior kreg = new Warrior("Kreg", 100, 20, 500, 15, level);
-        Warrior per = new Warrior ("Per", 100, 20, 500, 15, level);
-
-        System.out.println(per.getHp());
-
-        kreg.dealPhysDamage(per);
-
-        System.out.println(per.getHp());
+        Warrior per = new Warrior("Per", 100, 20, 500, 15, level);
+        kreg.setHitChance(0.9);
+        for (int x = 0; x < 1000; x++) {
+            kreg.AutoAttack(per);
+            System.out.println(per.getHp());
+        }
     }
 }
