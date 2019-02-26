@@ -2,20 +2,23 @@ package consolewow;
 
 import consolewow.helpers;
 
-public class Character extends AbstractCharacter{
+public class Character extends AbstractCharacter {
 
     private String name;
-    public Character(String name){
+
+    public Character(String name) {
         super();
         this.name = name;
     }
-    public Character(String name,int lvl){
+
+    public Character(String name, int lvl) {
         super(lvl);
         this.name = name;
     }
 
     // OTHER METHODS
     private Boolean alive = true;
+
     private void die() {
         if (alive) {
             alive = false;

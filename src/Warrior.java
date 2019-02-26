@@ -6,8 +6,9 @@ public class Warrior extends Character {
     public Warrior(String name) {
         super(name);
     }
+
     public Warrior(String name, int lvl) {
-        super(name,lvl);
+        super(name, lvl);
     }
 
     // OTHER METHODS

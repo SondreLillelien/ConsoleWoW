@@ -1,21 +1,21 @@
 package consolewow;
 
-import consolewow.helpers.MagicResistanceObject;
+import consolewow.helpers;
 
-public abstract class AbstractCharacter
-{   //statics  
+public abstract class AbstractCharacter { // statics
     private static int _baseHp = 200;
     private static int _basePhysicalDamage = 10;
     private static int _baseArmor = 15;
     private static int _baseAttackPower = 15;
-    private static MagicResistanceObject _baseRestistance = new MagicResistanceObject(0,0,0,0); 
+    private static MagicResistanceObject _baseRestistance = new MagicResistanceObject(0, 0, 0, 0);
 
-    private int level = 70;  
+    private int level = 70;
 
-    public AbstractCharacter(){
-        //empty hvis lvl 70 er greit som default lvl
+    public AbstractCharacter() {
+        // empty hvis lvl 70 er greit som default lvl
     }
-    public AbstractCharacter(int lvl){
+
+    public AbstractCharacter(int lvl) {
         this.level = lvl;
     }
 
@@ -27,7 +27,7 @@ public abstract class AbstractCharacter
         return hp;
     }
 
-    public int getAttackPower(){
+    public int getAttackPower() {
         int attackPowerPerLvl = 4;
         return this._baseAttackPower + (attackPowerPerLvl * this.level);
     }
@@ -35,7 +35,8 @@ public abstract class AbstractCharacter
     public double getPhysicalDamage() {
         int damagePerAP = 1;
         int apGainPerLvl = 4;
-        double physicalDamage = this._basePhysicalDamage + (this.getAttackPower() * damagePerAP) + (apGainPerLvl * this.level);
+        double physicalDamage = this._basePhysicalDamage + (this.getAttackPower() * damagePerAP)
+                + (apGainPerLvl * this.level);
         return physicalDamage;
     }
 
