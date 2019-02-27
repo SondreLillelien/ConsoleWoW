@@ -2,7 +2,7 @@ package application.races;
 
 import application.stats.*;
 
-public class Orc implements AbstractRace{
+public class Orc implements AbstractRace {
     private static String race = "Orc";
 
     public Orc() {
@@ -21,8 +21,9 @@ public class Orc implements AbstractRace{
     public MeleeStats getMeleeBonuses(MeleeStats stats) {
 
         // expertise with axes
-        int expertise = 5;
-        stats.setExpertise(expertise);
+        int bonus = 5;
+        int total = stats.getExpertise() + bonus;
+        stats.setExpertise(total);
 
         return stats;
     }

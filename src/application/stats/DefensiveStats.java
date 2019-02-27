@@ -5,12 +5,13 @@ import application.helpers.MagicResistanceObject;
 public class DefensiveStats {
     public DefensiveStats(int _hp, int _armor, double _stunResistance) {
         super();
+        setTotalHp(_hp);
         setHp(_hp);
         setArmor(_armor);
         setStunResistance(_stunResistance);
     }
 
-    private int _hp, _armor;
+    private int _totalHp, _hp, _armor;
     private double _stunResistance;
     private MagicResistanceObject _restistance = new MagicResistanceObject();
 
@@ -28,6 +29,14 @@ public class DefensiveStats {
 
     public void setHp(int hp) {
         this._hp = hp;
+    }
+
+    public void setTotalHp(int hp) {
+        this._totalHp = hp;
+    }
+
+    public int getTotalHp() {
+        return this._totalHp;
     }
 
     public int getArmor() {

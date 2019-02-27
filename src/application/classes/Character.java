@@ -5,6 +5,8 @@ import application.races.AbstractRace;
 public class Character extends AbstractCharacter {
 
     private String name;
+    private Boolean alive = true;
+    public Character target = this;
 
     public Character(String name, AbstractRace race) {
         super(race);
@@ -17,7 +19,6 @@ public class Character extends AbstractCharacter {
     }
 
     // OTHER METHODS
-    private Boolean alive = true;
 
     private void die() {
         if (alive) {
@@ -29,14 +30,21 @@ public class Character extends AbstractCharacter {
         alive = true;
     }
 
-    // public void takeDamage(int damage) {
-    // if (damage >= hp) {
-    // this.die();
-    // hp = 0;
-    // } else {
-    // hp -= damage;
-    // }
-    // }
+    public void takeDamage(int damage) {
+        int hp = this.getHp();
+
+        this.handleDamageTaken(damage);
+        System.out.println(this.name + " taking damage: " + damage);
+
+        if (damage >= hp) {
+            this.die();
+            System.out.println(this.name + " died...");
+        }
+    }
+
+    public void target(Character c) {
+        this.target = c;
+    }
 
     public Boolean getAlive() {
         return alive;
