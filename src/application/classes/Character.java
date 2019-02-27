@@ -1,18 +1,18 @@
-package consolewow;
+package application.classes;
 
-import consolewow.helpers;
+import application.races.AbstractRace;
 
 public class Character extends AbstractCharacter {
 
     private String name;
 
-    public Character(String name) {
-        super();
+    public Character(String name, AbstractRace race) {
+        super(race);
         this.name = name;
     }
 
-    public Character(String name, int lvl) {
-        super(lvl);
+    public Character(String name, int lvl, AbstractRace race) {
+        super(lvl, race);
         this.name = name;
     }
 
@@ -29,14 +29,14 @@ public class Character extends AbstractCharacter {
         alive = true;
     }
 
-    public void takeDamage(int damage) {
-        if (damage >= hp) {
-            this.die();
-            hp = 0;
-        } else {
-            hp -= damage;
-        }
-    }
+    // public void takeDamage(int damage) {
+    // if (damage >= hp) {
+    // this.die();
+    // hp = 0;
+    // } else {
+    // hp -= damage;
+    // }
+    // }
 
     public Boolean getAlive() {
         return alive;

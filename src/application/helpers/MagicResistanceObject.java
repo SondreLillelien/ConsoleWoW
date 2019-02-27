@@ -1,10 +1,20 @@
-package consolewow.helpers;
+package application.helpers;
 
 public class MagicResistanceObject {
     private int fire, frost, shadow, nature;
 
-    public MagicResistanceObject(int fire, int frost, int shadow, int nature) {
+    public MagicResistanceObject() {
+        setFire(5);
+        setFrost(5);
+        setShadow(5);
+        setNature(5);
+    }
 
+    public MagicResistanceObject(int fire, int frost, int shadow, int nature) {
+        setFire(fire);
+        setFrost(frost);
+        setShadow(shadow);
+        setNature(nature);
     }
 
     public int getFire() {
