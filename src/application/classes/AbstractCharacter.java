@@ -1,6 +1,5 @@
 package application.classes;
 
-import application.helpers.MagicResistanceObject;
 import application.races.AbstractRace;
 import application.stats.*;
 
@@ -12,7 +11,6 @@ public abstract class AbstractCharacter {
     private static int _baseExpertise = 10;
     private static int _baseMeleeDamage = 10;
     private static int _baseAttackPower = 15;
-    private static MagicResistanceObject _baseRestistance = new MagicResistanceObject(0, 0, 0, 0);
 
     private DefensiveStats _defensiveStats = new DefensiveStats(_baseTotalHp, _baseArmor, _baseStunResistance);
     private MeleeStats _meleeStats = new MeleeStats(_baseMeleeDamage, _baseAttackPower, _baseExpertise);
@@ -32,7 +30,7 @@ public abstract class AbstractCharacter {
 
     private static class pipelineEnum {
         public static String Defensive = "defensive";
-        public static String MagicDamage = "MagicDamage";
+        // public static String MagicDamage = "MagicDamage";
         public static String Melee = "Melee";
         public static String All = "All";
     }
@@ -66,11 +64,12 @@ public abstract class AbstractCharacter {
         MeleeStats meleeStats = this._meleeStats;
         int currentLevel = this._level;
         // racebonuses
-        MeleeStats asasd = this._race.getMeleeBonuses(meleeStats);
+        // MeleeStats asasd = this._race.getMeleeBonuses(meleeStats);
         // ap
         int damagePerAP = 1;
         int apGainPerLvl = 4;
-        int ap = this._baseMeleeDamage + (meleeStats.getAttackPower() * damagePerAP) + (apGainPerLvl * currentLevel);
+        int ap = AbstractCharacter._baseMeleeDamage + (meleeStats.getAttackPower() * damagePerAP)
+                + (apGainPerLvl * currentLevel);
         meleeStats.setAttackPower(ap);
 
         this._meleeStats = meleeStats;
@@ -81,12 +80,12 @@ public abstract class AbstractCharacter {
         int currentLevel = this._level;
 
         // armor
-        int armorPerlevel = 2;
+        // int armorPerlevel = 2;
 
         // stam gain per lvl
         int stamPerLevel = 2;
         int hpPerStamina = 10;
-        int totalHp = this._baseTotalHp + (stamPerLevel * currentLevel * hpPerStamina);
+        int totalHp = AbstractCharacter._baseTotalHp + (stamPerLevel * currentLevel * hpPerStamina);
         defensiveStats.setTotalHp(totalHp);
 
         // race bonuses

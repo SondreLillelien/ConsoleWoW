@@ -1,7 +1,6 @@
 package application.classes;
 
 import application.races.AbstractRace;
-import application.races.Troll;
 
 public class Warrior extends Character {
 

@@ -29,6 +29,6 @@ public class Orc implements AbstractRace {
     }
 
     public String getRace() {
-        return this.race;
+        return Orc.race;
     }
 }

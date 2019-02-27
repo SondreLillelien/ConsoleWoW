@@ -28,6 +28,6 @@ public class Troll implements AbstractRace {
     }
 
     public String getRace() {
-        return this.race;
+        return Troll.race;
     }
 }

@@ -29,7 +29,7 @@ public class Priest extends Character {
         // handle everything
 
         // handle resistance
-        double resist = this.target.getShadowResist();
+        // double resist = this.target.getShadowResist();
         // todo insert rng on resist chance
         System.out.println("Mindblasting " + this.target.getName());
         this.target.takeDamage(mindBlastDamage);
