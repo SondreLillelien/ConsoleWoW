@@ -1,6 +1,6 @@
-package application.classes;
+package consolewow.classes;
 
-import application.races.AbstractRace;
+import consolewow.races.AbstractRace;
 
 public class Priest extends Character {
     public Priest(String name, AbstractRace race) {

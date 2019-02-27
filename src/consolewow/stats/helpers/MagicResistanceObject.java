@@ -1,4 +1,4 @@
-package application.helpers;
+package consolewow.stats.helpers;
 
 public class MagicResistanceObject {
     private int fire, frost, shadow, nature;

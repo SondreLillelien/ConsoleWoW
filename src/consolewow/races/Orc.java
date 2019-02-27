@@ -1,11 +1,11 @@
-package application.races;
+package consolewow.races;
 
-import application.stats.*;
+import consolewow.stats.*;
 
-public class Troll implements AbstractRace {
-    private static String race = "Troll";
+public class Orc implements AbstractRace {
+    private static String race = "Orc";
 
-    public Troll() {
+    public Orc() {
         super();
     }
 
@@ -21,13 +21,14 @@ public class Troll implements AbstractRace {
     public MeleeStats getMeleeBonuses(MeleeStats stats) {
 
         // expertise with axes
-        int expertise = 5;
-        stats.setExpertise(expertise);
+        int bonus = 5;
+        int total = stats.getExpertise() + bonus;
+        stats.setExpertise(total);
 
         return stats;
     }
 
     public String getRace() {
-        return Troll.race;
+        return Orc.race;
     }
 }

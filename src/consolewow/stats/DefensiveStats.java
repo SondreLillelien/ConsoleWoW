@@ -1,6 +1,6 @@
-package application.stats;
+package consolewow.stats;
 
-import application.helpers.MagicResistanceObject;
+import consolewow.stats.helpers.MagicResistanceObject;
 
 public class DefensiveStats {
     public DefensiveStats(int _hp, int _armor, double _stunResistance) {

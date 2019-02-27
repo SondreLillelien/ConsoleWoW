@@ -1,7 +1,7 @@
-package application;
+package consolewow;
 
-import application.classes.*;
-import application.races.*;
+import consolewow.classes.*;
+import consolewow.races.*;
 
 public class Main {
 

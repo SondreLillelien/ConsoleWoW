@@ -1,6 +1,6 @@
-package application.races;
+package consolewow.races;
 
-import application.stats.*;
+import consolewow.stats.*;
 
 public interface AbstractRace {
 

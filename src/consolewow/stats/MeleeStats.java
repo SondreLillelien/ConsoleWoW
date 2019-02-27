@@ -1,4 +1,4 @@
-package application.stats;
+package consolewow.stats;
 
 public class MeleeStats {
     public MeleeStats(int _meleeDamage, int _attackPower, int _expertise) {

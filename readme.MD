@@ -6,8 +6,17 @@ some description...
 
 ```
 
-array = [1,6,4,2klv,s,sla,dov,3,9,1230,2,dl,a];
-for x in array print x.toString();
+public class Orc implements AbstractRace {
+    private static String race = "Orc";
+
+    public Orc() {
+        super();
+    }
+
+    public String getRace() {
+        return Orc.race;
+    }
+}
 
 ```
 

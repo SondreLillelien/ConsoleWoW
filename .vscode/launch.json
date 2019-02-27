@@ -15,7 +15,7 @@
             "type": "java",
             "name": "Debug (Launch)-Main",
             "request": "launch",
-            "mainClass": "application.Main"
+            "mainClass": "consolewow.Main"
         }
     ]
 }

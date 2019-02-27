@@ -1,7 +1,7 @@
-package application.classes;
+package consolewow.classes;
 
-import application.races.AbstractRace;
-import application.stats.*;
+import consolewow.races.AbstractRace;
+import consolewow.stats.*;
 
 public abstract class AbstractCharacter {
     // statics
